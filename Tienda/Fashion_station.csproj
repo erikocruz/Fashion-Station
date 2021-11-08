@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AF1E010-9EBE-437C-AC93-4D5CC29E1E4E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tienda</RootNamespace>
+    <AssemblyName>Tienda</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAdminBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminBD.Designer.cs">
+      <DependentUpon>FormAdminBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFacturas.Designer.cs">
+      <DependentUpon>FormFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportClte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportClte.Designer.cs">
+      <DependentUpon>FormReportClte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportErr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportErr.Designer.cs">
+      <DependentUpon>FormReportErr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportInv.Designer.cs">
+      <DependentUpon>FormReportInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTblCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTblCategorias.Designer.cs">
+      <DependentUpon>FormTblCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTblTiposPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTblTiposPersonas.Designer.cs">
+      <DependentUpon>FormTblTiposPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductos.Designer.cs">
+      <DependentUpon>FormProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAdminBD.resx">
+      <DependentUpon>FormAdminBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFacturas.resx">
+      <DependentUpon>FormFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTblCategorias.resx">
+      <DependentUpon>FormTblCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTblTiposPersonas.resx">
+      <DependentUpon>FormTblTiposPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductos.resx">
+      <DependentUpon>FormProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportClte.resx">
+      <DependentUpon>FormReportClte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Fashion.Cliente.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.ClientesBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.DatosdeInicio.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.FacturasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.Producto.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.Resultado.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.TblCategoriasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.TblClaseCltesBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.TblDeptosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.TblMunicipiosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.TblPaisesBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.TblSectorBoColsBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.TblTiposPersonasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Fashion.Usuario.datasource" />
+    <None Include="Properties\DataSources\Tienda.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Tienda.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Fashion\BL.Fashion.csproj">
+      <Project>{727e5050-6359-4a34-86da-3bcb3e0db5a1}</Project>
+      <Name>BL.Fashion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_0674.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fallon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NENE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Fashion Station.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modelo de mujer Transparente.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
