@@ -65,8 +65,8 @@ namespace Tienda
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.listaTblTiposPersonasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaTblCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoPersonaIdComboBox = new System.Windows.Forms.ComboBox();
-            this.categoriaIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tblTipoPersonaIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tblCategoriaIdComboBox = new System.Windows.Forms.ComboBox();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
@@ -379,31 +379,31 @@ namespace Tienda
             // 
             this.listaTblCategoriasBindingSource.DataSource = typeof(BL.Fashion.TblCategoria);
             // 
-            // tipoPersonaIdComboBox
+            // tblTipoPersonaIdComboBox
             // 
-            this.tipoPersonaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaProductosBindingSource, "TipoPersonaId", true));
-            this.tipoPersonaIdComboBox.DataSource = this.listaTblTiposPersonasBindingSource;
-            this.tipoPersonaIdComboBox.DisplayMember = "Descripcion";
-            this.tipoPersonaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipoPersonaIdComboBox.FormattingEnabled = true;
-            this.tipoPersonaIdComboBox.Location = new System.Drawing.Point(333, 138);
-            this.tipoPersonaIdComboBox.Name = "tipoPersonaIdComboBox";
-            this.tipoPersonaIdComboBox.Size = new System.Drawing.Size(212, 21);
-            this.tipoPersonaIdComboBox.TabIndex = 17;
-            this.tipoPersonaIdComboBox.ValueMember = "Id";
+            this.tblTipoPersonaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaProductosBindingSource, "TblTipoPersonaId", true));
+            this.tblTipoPersonaIdComboBox.DataSource = this.listaTblTiposPersonasBindingSource;
+            this.tblTipoPersonaIdComboBox.DisplayMember = "Descripcion";
+            this.tblTipoPersonaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tblTipoPersonaIdComboBox.FormattingEnabled = true;
+            this.tblTipoPersonaIdComboBox.Location = new System.Drawing.Point(333, 138);
+            this.tblTipoPersonaIdComboBox.Name = "tblTipoPersonaIdComboBox";
+            this.tblTipoPersonaIdComboBox.Size = new System.Drawing.Size(212, 21);
+            this.tblTipoPersonaIdComboBox.TabIndex = 17;
+            this.tblTipoPersonaIdComboBox.ValueMember = "Id";
             // 
-            // categoriaIdComboBox
+            // tblCategoriaIdComboBox
             // 
-            this.categoriaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaProductosBindingSource, "CategoriaId", true));
-            this.categoriaIdComboBox.DataSource = this.listaTblCategoriasBindingSource;
-            this.categoriaIdComboBox.DisplayMember = "Descripcion";
-            this.categoriaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.categoriaIdComboBox.FormattingEnabled = true;
-            this.categoriaIdComboBox.Location = new System.Drawing.Point(333, 168);
-            this.categoriaIdComboBox.Name = "categoriaIdComboBox";
-            this.categoriaIdComboBox.Size = new System.Drawing.Size(212, 21);
-            this.categoriaIdComboBox.TabIndex = 18;
-            this.categoriaIdComboBox.ValueMember = "Id";
+            this.tblCategoriaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaProductosBindingSource, "TblCategoriaId", true));
+            this.tblCategoriaIdComboBox.DataSource = this.listaTblCategoriasBindingSource;
+            this.tblCategoriaIdComboBox.DisplayMember = "Descripcion";
+            this.tblCategoriaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tblCategoriaIdComboBox.FormattingEnabled = true;
+            this.tblCategoriaIdComboBox.Location = new System.Drawing.Point(333, 168);
+            this.tblCategoriaIdComboBox.Name = "tblCategoriaIdComboBox";
+            this.tblCategoriaIdComboBox.Size = new System.Drawing.Size(212, 21);
+            this.tblCategoriaIdComboBox.TabIndex = 18;
+            this.tblCategoriaIdComboBox.ValueMember = "Id";
             // 
             // LogoPictureBox
             // 
@@ -423,9 +423,9 @@ namespace Tienda
             this.ClientSize = new System.Drawing.Size(798, 300);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(categoriaIdLabel);
-            this.Controls.Add(this.categoriaIdComboBox);
+            this.Controls.Add(this.tblCategoriaIdComboBox);
             this.Controls.Add(tipoPersonaIdLabel);
-            this.Controls.Add(this.tipoPersonaIdComboBox);
+            this.Controls.Add(this.tblTipoPersonaIdComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fotoPictureBox);
@@ -496,8 +496,8 @@ namespace Tienda
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.BindingSource listaTblTiposPersonasBindingSource;
         private System.Windows.Forms.BindingSource listaTblCategoriasBindingSource;
-        private System.Windows.Forms.ComboBox tipoPersonaIdComboBox;
-        private System.Windows.Forms.ComboBox categoriaIdComboBox;
+        private System.Windows.Forms.ComboBox tblTipoPersonaIdComboBox;
+        private System.Windows.Forms.ComboBox tblCategoriaIdComboBox;
         private System.Windows.Forms.PictureBox LogoPictureBox;
     }
 }

@@ -71,12 +71,12 @@ namespace Tienda
             this.listaTblClaseCltesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaTblDeptosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaTblMunicipiosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idClaseClteComboBox = new System.Windows.Forms.ComboBox();
-            this.direccPaisIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tblClaseClteIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tblPaisIdComboBox = new System.Windows.Forms.ComboBox();
             this.listaTblPaisesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.direccDeptoIdComboBox = new System.Windows.Forms.ComboBox();
-            this.direccMinicipioIdComboBox = new System.Windows.Forms.ComboBox();
-            this.direccSectorBoColIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tblDeptoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tblMunicipioIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tblSectorBoColIdComboBox = new System.Windows.Forms.ComboBox();
             this.listaTblSectorBoColsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.tel1TextBox = new System.Windows.Forms.TextBox();
@@ -455,74 +455,74 @@ namespace Tienda
             // 
             this.listaTblMunicipiosBindingSource.DataSource = typeof(BL.Fashion.TblMunicipio);
             // 
-            // idClaseClteComboBox
+            // tblClaseClteIdComboBox
             // 
-            this.idClaseClteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "IdClaseClte", true));
-            this.idClaseClteComboBox.DataSource = this.listaTblClaseCltesBindingSource;
-            this.idClaseClteComboBox.DisplayMember = "Descripcion";
-            this.idClaseClteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.idClaseClteComboBox.FormattingEnabled = true;
-            this.idClaseClteComboBox.Location = new System.Drawing.Point(325, 123);
-            this.idClaseClteComboBox.Name = "idClaseClteComboBox";
-            this.idClaseClteComboBox.Size = new System.Drawing.Size(191, 21);
-            this.idClaseClteComboBox.TabIndex = 68;
-            this.idClaseClteComboBox.ValueMember = "Id";
+            this.tblClaseClteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "TblClaseClteId", true));
+            this.tblClaseClteIdComboBox.DataSource = this.listaTblClaseCltesBindingSource;
+            this.tblClaseClteIdComboBox.DisplayMember = "Descripcion";
+            this.tblClaseClteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tblClaseClteIdComboBox.FormattingEnabled = true;
+            this.tblClaseClteIdComboBox.Location = new System.Drawing.Point(325, 123);
+            this.tblClaseClteIdComboBox.Name = "tblClaseClteIdComboBox";
+            this.tblClaseClteIdComboBox.Size = new System.Drawing.Size(191, 21);
+            this.tblClaseClteIdComboBox.TabIndex = 68;
+            this.tblClaseClteIdComboBox.ValueMember = "Id";
             // 
-            // direccPaisIdComboBox
+            // tblPaisIdComboBox
             // 
-            this.direccPaisIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "DireccPaisId", true));
-            this.direccPaisIdComboBox.DataSource = this.listaTblPaisesBindingSource;
-            this.direccPaisIdComboBox.DisplayMember = "Descripcion";
-            this.direccPaisIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.direccPaisIdComboBox.FormattingEnabled = true;
-            this.direccPaisIdComboBox.Location = new System.Drawing.Point(325, 160);
-            this.direccPaisIdComboBox.Name = "direccPaisIdComboBox";
-            this.direccPaisIdComboBox.Size = new System.Drawing.Size(191, 21);
-            this.direccPaisIdComboBox.TabIndex = 69;
-            this.direccPaisIdComboBox.ValueMember = "Id";
+            this.tblPaisIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "TblPaisId", true));
+            this.tblPaisIdComboBox.DataSource = this.listaTblPaisesBindingSource;
+            this.tblPaisIdComboBox.DisplayMember = "Descripcion";
+            this.tblPaisIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tblPaisIdComboBox.FormattingEnabled = true;
+            this.tblPaisIdComboBox.Location = new System.Drawing.Point(325, 160);
+            this.tblPaisIdComboBox.Name = "tblPaisIdComboBox";
+            this.tblPaisIdComboBox.Size = new System.Drawing.Size(191, 21);
+            this.tblPaisIdComboBox.TabIndex = 69;
+            this.tblPaisIdComboBox.ValueMember = "Id";
             // 
             // listaTblPaisesBindingSource
             // 
             this.listaTblPaisesBindingSource.DataSource = typeof(BL.Fashion.TblPais);
             // 
-            // direccDeptoIdComboBox
+            // tblDeptoIdComboBox
             // 
-            this.direccDeptoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "DireccDeptoId", true));
-            this.direccDeptoIdComboBox.DataSource = this.listaTblDeptosBindingSource;
-            this.direccDeptoIdComboBox.DisplayMember = "Descripcion";
-            this.direccDeptoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.direccDeptoIdComboBox.FormattingEnabled = true;
-            this.direccDeptoIdComboBox.Location = new System.Drawing.Point(325, 185);
-            this.direccDeptoIdComboBox.Name = "direccDeptoIdComboBox";
-            this.direccDeptoIdComboBox.Size = new System.Drawing.Size(191, 21);
-            this.direccDeptoIdComboBox.TabIndex = 70;
-            this.direccDeptoIdComboBox.ValueMember = "Id";
+            this.tblDeptoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "TblDeptoId", true));
+            this.tblDeptoIdComboBox.DataSource = this.listaTblDeptosBindingSource;
+            this.tblDeptoIdComboBox.DisplayMember = "Descripcion";
+            this.tblDeptoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tblDeptoIdComboBox.FormattingEnabled = true;
+            this.tblDeptoIdComboBox.Location = new System.Drawing.Point(325, 185);
+            this.tblDeptoIdComboBox.Name = "tblDeptoIdComboBox";
+            this.tblDeptoIdComboBox.Size = new System.Drawing.Size(191, 21);
+            this.tblDeptoIdComboBox.TabIndex = 70;
+            this.tblDeptoIdComboBox.ValueMember = "Id";
             // 
-            // direccMinicipioIdComboBox
+            // tblMunicipioIdComboBox
             // 
-            this.direccMinicipioIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "DireccMinicipioId", true));
-            this.direccMinicipioIdComboBox.DataSource = this.listaTblMunicipiosBindingSource;
-            this.direccMinicipioIdComboBox.DisplayMember = "Descripcion";
-            this.direccMinicipioIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.direccMinicipioIdComboBox.FormattingEnabled = true;
-            this.direccMinicipioIdComboBox.Location = new System.Drawing.Point(325, 210);
-            this.direccMinicipioIdComboBox.Name = "direccMinicipioIdComboBox";
-            this.direccMinicipioIdComboBox.Size = new System.Drawing.Size(191, 21);
-            this.direccMinicipioIdComboBox.TabIndex = 71;
-            this.direccMinicipioIdComboBox.ValueMember = "Id";
+            this.tblMunicipioIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "TblMunicipioId", true));
+            this.tblMunicipioIdComboBox.DataSource = this.listaTblMunicipiosBindingSource;
+            this.tblMunicipioIdComboBox.DisplayMember = "Descripcion";
+            this.tblMunicipioIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tblMunicipioIdComboBox.FormattingEnabled = true;
+            this.tblMunicipioIdComboBox.Location = new System.Drawing.Point(325, 210);
+            this.tblMunicipioIdComboBox.Name = "tblMunicipioIdComboBox";
+            this.tblMunicipioIdComboBox.Size = new System.Drawing.Size(191, 21);
+            this.tblMunicipioIdComboBox.TabIndex = 71;
+            this.tblMunicipioIdComboBox.ValueMember = "Id";
             // 
-            // direccSectorBoColIdComboBox
+            // tblSectorBoColIdComboBox
             // 
-            this.direccSectorBoColIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "DireccSectorBoColId", true));
-            this.direccSectorBoColIdComboBox.DataSource = this.listaTblSectorBoColsBindingSource;
-            this.direccSectorBoColIdComboBox.DisplayMember = "Descripcion";
-            this.direccSectorBoColIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.direccSectorBoColIdComboBox.FormattingEnabled = true;
-            this.direccSectorBoColIdComboBox.Location = new System.Drawing.Point(325, 235);
-            this.direccSectorBoColIdComboBox.Name = "direccSectorBoColIdComboBox";
-            this.direccSectorBoColIdComboBox.Size = new System.Drawing.Size(191, 21);
-            this.direccSectorBoColIdComboBox.TabIndex = 72;
-            this.direccSectorBoColIdComboBox.ValueMember = "Id";
+            this.tblSectorBoColIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "TblSectorBoColId", true));
+            this.tblSectorBoColIdComboBox.DataSource = this.listaTblSectorBoColsBindingSource;
+            this.tblSectorBoColIdComboBox.DisplayMember = "Descripcion";
+            this.tblSectorBoColIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tblSectorBoColIdComboBox.FormattingEnabled = true;
+            this.tblSectorBoColIdComboBox.Location = new System.Drawing.Point(325, 235);
+            this.tblSectorBoColIdComboBox.Name = "tblSectorBoColIdComboBox";
+            this.tblSectorBoColIdComboBox.Size = new System.Drawing.Size(191, 21);
+            this.tblSectorBoColIdComboBox.TabIndex = 72;
+            this.tblSectorBoColIdComboBox.ValueMember = "Id";
             // 
             // direccionTextBox
             // 
@@ -569,12 +569,19 @@ namespace Tienda
             this.generoComboBox.AutoCompleteCustomSource.AddRange(new string[] {
             "Masculino",
             "Femenino"});
+            this.generoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "Genero", true));
             this.generoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.generoComboBox.FormattingEnabled = true;
+            this.generoComboBox.Items.AddRange(new object[] {
+            "",
+            "Hombre",
+            "Mujer"});
             this.generoComboBox.Location = new System.Drawing.Point(325, 97);
             this.generoComboBox.Name = "generoComboBox";
-            this.generoComboBox.Size = new System.Drawing.Size(132, 21);
+            this.generoComboBox.Size = new System.Drawing.Size(191, 21);
             this.generoComboBox.TabIndex = 78;
+            this.generoComboBox.ValueMember = "Genero";
+            this.generoComboBox.SelectedIndexChanged += new System.EventHandler(this.generoComboBox_SelectedIndexChanged);
             // 
             // activoCheckBox
             // 
@@ -607,15 +614,15 @@ namespace Tienda
             this.Controls.Add(direccionLabel);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(direccSectorBoColIdLabel);
-            this.Controls.Add(this.direccSectorBoColIdComboBox);
+            this.Controls.Add(this.tblSectorBoColIdComboBox);
             this.Controls.Add(direccMinicipioIdLabel);
-            this.Controls.Add(this.direccMinicipioIdComboBox);
+            this.Controls.Add(this.tblMunicipioIdComboBox);
             this.Controls.Add(direccDeptoIdLabel);
-            this.Controls.Add(this.direccDeptoIdComboBox);
+            this.Controls.Add(this.tblDeptoIdComboBox);
             this.Controls.Add(direccPaisIdLabel);
-            this.Controls.Add(this.direccPaisIdComboBox);
+            this.Controls.Add(this.tblPaisIdComboBox);
             this.Controls.Add(idClaseClteLabel);
-            this.Controls.Add(this.idClaseClteComboBox);
+            this.Controls.Add(this.tblClaseClteIdComboBox);
             this.Controls.Add(this.listaClientesBindingNavigator);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.button2);
@@ -681,11 +688,11 @@ namespace Tienda
         private System.Windows.Forms.BindingSource listaTblClaseCltesBindingSource;
         private System.Windows.Forms.BindingSource listaTblDeptosBindingSource;
         private System.Windows.Forms.BindingSource listaTblMunicipiosBindingSource;
-        private System.Windows.Forms.ComboBox idClaseClteComboBox;
-        private System.Windows.Forms.ComboBox direccPaisIdComboBox;
-        private System.Windows.Forms.ComboBox direccDeptoIdComboBox;
-        private System.Windows.Forms.ComboBox direccMinicipioIdComboBox;
-        private System.Windows.Forms.ComboBox direccSectorBoColIdComboBox;
+        private System.Windows.Forms.ComboBox tblClaseClteIdComboBox;
+        private System.Windows.Forms.ComboBox tblPaisIdComboBox;
+        private System.Windows.Forms.ComboBox tblDeptoIdComboBox;
+        private System.Windows.Forms.ComboBox tblMunicipioIdComboBox;
+        private System.Windows.Forms.ComboBox tblSectorBoColIdComboBox;
         private System.Windows.Forms.BindingSource listaTblSectorBoColsBindingSource;
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.TextBox tel1TextBox;

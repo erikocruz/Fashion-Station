@@ -154,5 +154,17 @@ namespace Tienda
         {
             fotoPictureBox.Image = null;
         }
+
+        private void generoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //listaClientesBindingSource.EndEdit();
+            //var cliente = (Cliente)listaClientesBindingSource.Current;
+
+            //int indice = generoComboBox.SelectedIndex;
+            //cliente.Genero = generoComboBox.SelectedText;
+
+            //cliente.Genero = generoComboBox.Items[indice].ToString();
+
+        }
     }
 }
