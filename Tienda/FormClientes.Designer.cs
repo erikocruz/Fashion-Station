@@ -441,7 +441,7 @@ namespace Tienda
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
             // 
             // listaTblClaseCltesBindingSource
             // 
@@ -570,6 +570,7 @@ namespace Tienda
             "Masculino",
             "Femenino"});
             this.generoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "Genero", true));
+            this.generoComboBox.DisplayMember = "Genero";
             this.generoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.generoComboBox.FormattingEnabled = true;
             this.generoComboBox.Items.AddRange(new object[] {
