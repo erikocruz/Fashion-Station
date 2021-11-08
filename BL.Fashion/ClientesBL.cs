@@ -120,17 +120,17 @@ namespace BL.Fashion
         public int Id { get; set; }
         public string Nombre { get; set; }
         
-        public int IdClaseClte { get; set; }
+        public int TblClaseClteId { get; set; }
         public TblClaseClte TblClaseClte { get; set; }
         //public int PaisOrigenId { get; set; }
         //public TblPais TblPais { get; set; }
-        public int DireccPaisId { get; set; }
+        public int TblPaisId { get; set; }
         public TblPais TblPais { get; set; }
-        public int DireccDeptoId { get; set; }
+        public int TblDeptoId { get; set; }
         public TblDepto TblDepto { get; set; }
-        public int DireccMinicipioId { get; set; }
+        public int TblMunicipioId { get; set; }
         public TblMunicipio TblMunicipio { get; set; }
-        public int DireccSectorBoColId { get; set; }
+        public int TblSectorBoColId { get; set; }
         public TblSectorBoCol TblSectorBoCol { get; set; }
         public string Direccion { get; set; }
 

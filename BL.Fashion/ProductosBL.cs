@@ -100,13 +100,13 @@ namespace BL.Fashion
                 resultado.Exitoso = false;
             }
             
-            if (producto.TipoPersonaId == 0)
+            if (producto.TblTipoPersonaId == 0)
             {
                 resultado.Mensaje = "Debe registrar al Tipo de Persona al que refiere este Producto.";
                 resultado.Exitoso = false;
             }
 
-            if (producto.CategoriaId == 0)
+            if (producto.TblCategoriaId == 0)
             {
                 resultado.Mensaje = "Debe registrar una 'Categoría'.";
                 resultado.Exitoso = false;
@@ -122,9 +122,9 @@ namespace BL.Fashion
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public int Existencia { get; set; }
-        public int TipoPersonaId { get; set; }
+        public int TblTipoPersonaId { get; set; }
         public TblTipoPersona TblTipoPersona { get; set; }
-        public int CategoriaId { get; set; }
+        public int TblCategoriaId { get; set; }
         public TblCategoria TblCategoria { get; set; }
         public byte[] Foto{ get; set; }
         public bool Activo { get; set; }
