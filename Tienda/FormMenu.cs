@@ -44,7 +44,7 @@ namespace Tienda
 
         private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formreporcliente = new FormReportClte();
+            var formreporcliente = new FormReporteClientes();
             formreporcliente.MdiParent = this;
             formreporcliente.Show();
         }
@@ -134,6 +134,20 @@ namespace Tienda
             var formfacturas = new FormFacturas();
             formfacturas.MdiParent = this;
             formfacturas.Show();
+        }
+
+        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteProductos = new FormReporteProductos();
+            formReporteProductos.MdiParent = this;
+            formReporteProductos.Show();
+        }
+
+        private void reporteDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturas = new FormReporteFacturas();
+            formReporteFacturas.MdiParent = this;
+            formReporteFacturas.Show();
         }
     }
 }
