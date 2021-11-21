@@ -6,31 +6,23 @@ using System.Windows.Forms;
 
 namespace Tienda
 {
-    public partial class FormProductos : Form
+    public partial class FormUsuarios : Form
     {
-
-        ProductosBL _productos;
-        TblTiposPersonasBL _tipospersonas;
-        TblCategoriasBL _categorias;
-
-        public FormProductos()
+        SeguridadBL _usuarios;
+        
+        public FormUsuarios()
         {
             InitializeComponent();
 
-            _productos = new ProductosBL();
-            listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
-
-            _tipospersonas = new TblTiposPersonasBL();
-            listaTblTiposPersonasBindingSource.DataSource = _tipospersonas.ObtenerTblTiposPersonas();
-
-            _categorias = new TblCategoriasBL();
-            listaTblCategoriasBindingSource.DataSource = _categorias.ObtenerTblCategorias();
+            _usuarios = new SeguridadBL();
+            listaUsuariosBindingSource.DataSource = _usuarios.ObtenerUsuarios();
+            _usuarios.ObtenerUsuarios();
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            _productos.AgregarProducto();
-            listaProductosBindingSource.MoveLast();
+            _usuarios.AgregarUsuario();
+            listaUsuariosBindingSource.MoveLast();
 
             DeshabilitarHabilitarBotones(false);
         }
@@ -48,26 +40,26 @@ namespace Tienda
             CancelarToolStripButton.Visible = !valor;
         }
 
-        private void listaProductosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void listaUsuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            listaProductosBindingSource.EndEdit();
-            var producto = (Producto)listaProductosBindingSource.Current;
+            listaUsuariosBindingSource.EndEdit();
+            var usuario = (Usuario)listaUsuariosBindingSource.Current;
 
             if (fotoPictureBox.Image != null)
             {
-                producto.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+                usuario.Foto = Program.imageToByteArray(fotoPictureBox.Image);
             }
             else
             {
-                producto.Foto = null;
+                usuario.Foto = null;
             }
-            var resultado = _productos.GuardarProducto(producto);
+            var resultado = _usuarios.GuardarUsuario(usuario);
 
             if (resultado.Exitoso == true)
             {
-                listaProductosBindingSource.ResetBindings(false);
+                listaUsuariosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
-                MessageBox.Show("Producto Guardado");
+                MessageBox.Show("Usuario Guardado");
             }
             else
             {
@@ -94,28 +86,28 @@ namespace Tienda
 
         private void Eliminar(int id)
         {
-            var resultado = _productos.EliminarProducto(id);
+            var resultado = _usuarios.EliminarUsuario(id);
             if (resultado == true)
             {
-                listaProductosBindingSource.ResetBindings(false);
+                listaUsuariosBindingSource.ResetBindings(false);
             }
             else
             {
-                MessageBox.Show("Ocurrió un error al intentar eliminar el producto.");
+                MessageBox.Show("Ocurrió un error al intentar eliminar el usuario.");
             }
         }
 
         private void CancelarToolStripButton_Click(object sender, EventArgs e)
         {
-            _productos.CancelarCambios();
+            _usuarios.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var producto = (Producto)listaProductosBindingSource.Current;
+            var usuario = (Usuario)listaUsuariosBindingSource.Current;
 
-            if (producto != null)
+            if (usuario != null)
             {
                 openFileDialog1.ShowDialog();
                 var archivo = openFileDialog1.FileName;
@@ -130,7 +122,7 @@ namespace Tienda
             }
             else
             {
-                MessageBox.Show("Debe crear un producto antes de asignarle una imagen");
+                MessageBox.Show("Debe crear un usuario antes de asignarle una imagen");
             }
             
         }
@@ -138,24 +130,6 @@ namespace Tienda
         private void button2_Click(object sender, EventArgs e)
         {
             fotoPictureBox.Image = null;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //listaProductosBindingSource.DataSource = null;
-
-            string buscar = textBox1.Text;
-
-            if (string.IsNullOrEmpty(buscar))
-            {
-                listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
-            }
-            else
-            {
-                listaProductosBindingSource.DataSource = _productos.ObtenerProductos(buscar);
-            }
-
-            listaProductosBindingSource.ResetBindings(false);
         }
     }
 }

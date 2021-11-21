@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Fashion;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -7,6 +8,8 @@ namespace Tienda
 {
     static class Program
     {
+        public static Usuario UsuarioLogueado;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

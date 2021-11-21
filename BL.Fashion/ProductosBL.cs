@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Data.Entity;
+using System.Linq;
 
 namespace BL.Fashion
 {
@@ -13,8 +14,7 @@ namespace BL.Fashion
         {
             _contexto = new Contexto();
             ListaProductos = new BindingList<Producto>();
-
-           }
+        }
 
         public BindingList<Producto> ObtenerProductos()
         {
@@ -22,6 +22,13 @@ namespace BL.Fashion
             ListaProductos = _contexto.Productos.Local.ToBindingList();
 
             return ListaProductos;
+        }
+
+        public BindingList<Producto> ObtenerProductos(string buscar)
+        {
+            var resultado = _contexto.Productos.Where(p => p.Descripcion.ToLower().Contains(buscar.ToLower()));
+
+            return new BindingList<Producto>(resultado.ToList());
         }
 
         public void CancelarCambios()
@@ -132,6 +139,7 @@ namespace BL.Fashion
         public Producto()
         {
             Activo = true;
+            Foto = null;
         }
     }
 

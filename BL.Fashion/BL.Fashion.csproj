@@ -72,6 +72,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Cliente.datasource" />
     <None Include="Properties\DataSources\ClientesBL.datasource" />
+    <None Include="Properties\DataSources\FacturaDetalle.datasource" />
     <None Include="Properties\DataSources\FacturasBL.datasource" />
     <None Include="Properties\DataSources\TblCategoriasBL.datasource" />
     <None Include="Properties\DataSources\Producto.datasource" />
@@ -84,7 +85,6 @@
     <None Include="Properties\DataSources\TblSectorBoColsBL.datasource" />
     <None Include="Properties\DataSources\TblTiposPersonasBL.datasource" />
     <None Include="Properties\DataSources\Usuario.datasource" />
-    <None Include="Properties\DataSources\UsuariosBL.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

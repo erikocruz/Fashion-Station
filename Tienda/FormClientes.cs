@@ -166,5 +166,21 @@ namespace Tienda
             //cliente.Genero = generoComboBox.Items[indice].ToString();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string buscar = textBox1.Text;
+
+            if (string.IsNullOrEmpty(buscar))
+            {
+                listaClientesBindingSource.DataSource = _clientes.ObtenerClientes();
+            }
+            else
+            {
+                listaClientesBindingSource.DataSource = _clientes.ObtenerClientes(buscar);
+            }
+
+            listaClientesBindingSource.ResetBindings(false);
+        }
     }
 }

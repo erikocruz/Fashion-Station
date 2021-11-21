@@ -85,6 +85,8 @@ namespace Tienda
             this.email2TextBox = new System.Windows.Forms.TextBox();
             this.generoComboBox = new System.Windows.Forms.ComboBox();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             nombreLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             idClaseClteLabel = new System.Windows.Forms.Label();
@@ -233,7 +235,7 @@ namespace Tienda
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(571, 50);
+            activoLabel.Location = new System.Drawing.Point(593, 50);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(40, 13);
             activoLabel.TabIndex = 78;
@@ -265,18 +267,18 @@ namespace Tienda
             this.fotoPictureBox.BackColor = System.Drawing.Color.Gray;
             this.fotoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaClientesBindingSource, "Foto", true));
-            this.fotoPictureBox.Location = new System.Drawing.Point(675, 47);
+            this.fotoPictureBox.Location = new System.Drawing.Point(678, 97);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(198, 206);
+            this.fotoPictureBox.Size = new System.Drawing.Size(227, 159);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 11;
             this.fotoPictureBox.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(674, 257);
+            this.button1.Location = new System.Drawing.Point(693, 271);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(86, 23);
             this.button1.TabIndex = 15;
             this.button1.Text = "Agregar Foto";
             this.button1.UseVisualStyleBackColor = true;
@@ -284,9 +286,9 @@ namespace Tienda
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(774, 257);
+            this.button2.Location = new System.Drawing.Point(804, 271);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.Size = new System.Drawing.Size(86, 23);
             this.button2.TabIndex = 16;
             this.button2.Text = "Remover Foto";
             this.button2.UseVisualStyleBackColor = true;
@@ -295,9 +297,9 @@ namespace Tienda
             // LogoPictureBox
             // 
             this.LogoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoPictureBox.Image")));
-            this.LogoPictureBox.Location = new System.Drawing.Point(21, 47);
+            this.LogoPictureBox.Location = new System.Drawing.Point(21, 75);
             this.LogoPictureBox.Name = "LogoPictureBox";
-            this.LogoPictureBox.Size = new System.Drawing.Size(182, 285);
+            this.LogoPictureBox.Size = new System.Drawing.Size(184, 219);
             this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LogoPictureBox.TabIndex = 19;
             this.LogoPictureBox.TabStop = false;
@@ -329,7 +331,7 @@ namespace Tienda
             this.listaClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaClientesBindingNavigator.Name = "listaClientesBindingNavigator";
             this.listaClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(887, 25);
+            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(932, 25);
             this.listaClientesBindingNavigator.TabIndex = 0;
             this.listaClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -569,29 +571,44 @@ namespace Tienda
             this.generoComboBox.AutoCompleteCustomSource.AddRange(new string[] {
             "Masculino",
             "Femenino"});
-            this.generoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "Genero", true));
-            this.generoComboBox.DisplayMember = "Genero";
+            this.generoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.listaClientesBindingSource, "Genero", true));
             this.generoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.generoComboBox.FormattingEnabled = true;
             this.generoComboBox.Items.AddRange(new object[] {
-            "",
             "Hombre",
             "Mujer"});
             this.generoComboBox.Location = new System.Drawing.Point(325, 97);
             this.generoComboBox.Name = "generoComboBox";
             this.generoComboBox.Size = new System.Drawing.Size(191, 21);
             this.generoComboBox.TabIndex = 78;
-            this.generoComboBox.ValueMember = "Genero";
             this.generoComboBox.SelectedIndexChanged += new System.EventHandler(this.generoComboBox_SelectedIndexChanged);
             // 
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaClientesBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(618, 45);
+            this.activoCheckBox.Location = new System.Drawing.Point(640, 45);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(17, 24);
             this.activoCheckBox.TabIndex = 79;
             this.activoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(830, 70);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 81;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LemonChiffon;
+            this.textBox1.Location = new System.Drawing.Point(678, 73);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(146, 20);
+            this.textBox1.TabIndex = 82;
             // 
             // FormClientes
             // 
@@ -599,7 +616,9 @@ namespace Tienda
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(887, 352);
+            this.ClientSize = new System.Drawing.Size(932, 352);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(generoLabel);
@@ -704,5 +723,7 @@ namespace Tienda
         private System.Windows.Forms.ToolStripButton CancelarToolStripButton;
         private System.Windows.Forms.BindingSource listaTblPaisesBindingSource;
         private System.Windows.Forms.CheckBox activoCheckBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

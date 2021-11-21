@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data.Entity;
+using System.Linq;
 
 namespace BL.Fashion
 {
@@ -25,7 +26,6 @@ namespace BL.Fashion
 
             return ListaFacturas;
         }
-
 
         public void AgregarFactura()
         {
@@ -221,6 +221,8 @@ namespace BL.Fashion
         public int Cantidad { get; set; }
         public double Precio { get; set; }
         public double Total { get; set; }
+        public int FacturaId { get; set; }
+        public Factura Factura { get; set; }
 
         public FacturaDetalle()
         {

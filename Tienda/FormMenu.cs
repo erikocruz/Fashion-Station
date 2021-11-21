@@ -17,8 +17,44 @@ namespace Tienda
 
         private void Login()
         {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+
             var formlogin = new FormLogin();
             formlogin.ShowDialog();
+
+            if (Utilidades.UsuarioActual != null)
+            {
+                toolStripStatusLabel1.Text = "Usuario: " + Utilidades.UsuarioActual.Nombre;
+
+                //mantCltesToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaClientes;
+                //mantProductosToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaProductos;
+                //facturasToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaFacturas;
+                //reportesToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaReportes;
+
+                usuariosToolStripMenuItem.Visible = Utilidades.UsuarioActual.UserAdmin;
+                mantCltesToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaClientes;
+                mantProductosToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaProductos;
+                facturasToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaFacturas;
+                reportesToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaReportes;
+
+
+                //if (Utilidades.UsuarioActual.UserAdmin == true)
+                //{
+                //    usuariosToolStripMenuItem.Visible = true;
+                //}
+                //else
+                //{
+                //    usuariosToolStripMenuItem.Visible = Utilidades.UsuarioActual.UserAdmin;
+
+                //    mantCltesToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaClientes;
+                //    mantProductosToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaProductos;
+                //    facturasToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaFacturas;
+                //    reportesToolStripMenuItem.Visible = Utilidades.UsuarioActual.AccesaReportes;
+                //}
+            }
         }
 
         private void ropaParaCaballeroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,7 +80,7 @@ namespace Tienda
 
         private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formreporcliente = new FormReportClte();
+            var formreporcliente = new FormReporteClientes();
             formreporcliente.MdiParent = this;
             formreporcliente.Show();
         }
@@ -66,8 +102,7 @@ namespace Tienda
 
         private void formmenu_Load(object sender, EventArgs e)
         {
-            var formlogin = new FormLogin();
-            formlogin.ShowDialog();
+            Login();
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -134,6 +169,27 @@ namespace Tienda
             var formfacturas = new FormFacturas();
             formfacturas.MdiParent = this;
             formfacturas.Show();
+        }
+
+        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteProductos = new FormReporteProductos();
+            formReporteProductos.MdiParent = this;
+            formReporteProductos.Show();
+        }
+
+        private void reporteDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturas = new FormReporteFacturas();
+            formReporteFacturas.MdiParent = this;
+            formReporteFacturas.Show();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formUsuarios = new FormUsuarios();
+            formUsuarios.MdiParent = this;
+            formUsuarios.Show();
         }
     }
 }

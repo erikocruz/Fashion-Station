@@ -70,6 +70,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
@@ -79,6 +80,7 @@
             this.textBox2.PasswordChar = '+';
             this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // button1
             // 
@@ -114,7 +116,7 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // formlogin
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,12 +134,11 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "formlogin";
+            this.Name = "FormLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "Registre su Usuario y Contraseña.";
             this.Text = "Ingreso al Sistema - FASHION STATION";
-            this.Load += new System.EventHandler(this.formlogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
