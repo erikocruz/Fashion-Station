@@ -372,6 +372,7 @@ namespace Tienda
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaUsuariosBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(342, 47);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(53, 20);
             this.idTextBox.TabIndex = 17;
             // 

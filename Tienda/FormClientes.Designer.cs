@@ -260,7 +260,7 @@ namespace Tienda
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(132, 20);
-            this.idTextBox.TabIndex = 1;
+            this.idTextBox.TabIndex = 10;
             // 
             // fotoPictureBox
             // 
