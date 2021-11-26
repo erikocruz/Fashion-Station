@@ -138,34 +138,34 @@
             // reporteDeClientesToolStripMenuItem
             // 
             this.reporteDeClientesToolStripMenuItem.Name = "reporteDeClientesToolStripMenuItem";
-            this.reporteDeClientesToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.reporteDeClientesToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.reporteDeClientesToolStripMenuItem.Text = "Listado de Clientes";
             this.reporteDeClientesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeClientesToolStripMenuItem_Click);
             // 
             // reporteDeProductosToolStripMenuItem
             // 
             this.reporteDeProductosToolStripMenuItem.Name = "reporteDeProductosToolStripMenuItem";
-            this.reporteDeProductosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.reporteDeProductosToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.reporteDeProductosToolStripMenuItem.Text = "Listado de Productos";
             this.reporteDeProductosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeProductosToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(244, 6);
             // 
             // reporteDeFacturasToolStripMenuItem
             // 
             this.reporteDeFacturasToolStripMenuItem.Name = "reporteDeFacturasToolStripMenuItem";
-            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.reporteDeFacturasToolStripMenuItem.Text = "Listado de Ventas";
+            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.reporteDeFacturasToolStripMenuItem.Text = "Listado de Ventas según Facturas";
             this.reporteDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturasToolStripMenuItem_Click);
             // 
             // reporteDeErroresToolStripMenuItem1
             // 
             this.reporteDeErroresToolStripMenuItem1.Enabled = false;
             this.reporteDeErroresToolStripMenuItem1.Name = "reporteDeErroresToolStripMenuItem1";
-            this.reporteDeErroresToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
+            this.reporteDeErroresToolStripMenuItem1.Size = new System.Drawing.Size(247, 22);
             this.reporteDeErroresToolStripMenuItem1.Text = "Reporte de errores";
             this.reporteDeErroresToolStripMenuItem1.Visible = false;
             this.reporteDeErroresToolStripMenuItem1.Click += new System.EventHandler(this.reporteDeErroresToolStripMenuItem1_Click);

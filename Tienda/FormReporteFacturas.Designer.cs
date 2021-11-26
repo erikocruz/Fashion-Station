@@ -54,7 +54,7 @@
             this.MinimizeBox = false;
             this.Name = "FormReporteFacturas";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Reporte de Facturas";
+            this.Text = "Listado de Ventas según Facturas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
