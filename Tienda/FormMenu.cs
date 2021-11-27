@@ -105,11 +105,6 @@ namespace Tienda
             Login();
         }
 
-        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.TileHorizontal);
@@ -131,11 +126,6 @@ namespace Tienda
             {
                 childForm.Close();
             }
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void reporteDeErroresToolStripMenuItem1_Click(object sender, EventArgs e)
